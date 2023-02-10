@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import './TodoList.css'
 import { useNavigate, useParams } from 'react-router-dom';
 
 export default function TodoForm() {
@@ -68,8 +69,10 @@ export default function TodoForm() {
                 value={todo.description}
                 onChange={handleTodoChange}
             />
-            <button className='greenButton' type="submit">Save Todo</button>
-            <button className='redButton' type="button" onClick={handleCancel}>Cancel</button>
+            <div className='buttons'>
+                <button className='editButton' type="submit">Save Todo</button>
+                <button className='deleteButton' type="button" onClick={handleCancel}>Cancel</button>
+            </div>
         </form>
     );
 }

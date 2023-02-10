@@ -1,4 +1,5 @@
 import React from 'react'
+import './TodoList.css'
 import { useNavigate } from 'react-router-dom'
 
 export default function Todo({ todo, deleteTodo }) {
@@ -9,7 +10,7 @@ export default function Todo({ todo, deleteTodo }) {
 
     return (
         <div className='todo'>
-            <label>
+            <label className='todoLabel'>
                 <b>Name:</b> {todo.name}
                 <br></br>
                 <b>Description:</b>
@@ -18,8 +19,8 @@ export default function Todo({ todo, deleteTodo }) {
                 {todo.description}
             </label>
             <br></br>
-            <button className='greenButton' onClick={handleEdit}> Edit</button>
-            <button className='redButton' onClick={() => deleteTodo(todo.id)}>Delete</button>
+            <button className='editButton' onClick={handleEdit}> Edit</button>
+            <button className='deleteButton' onClick={() => deleteTodo(todo.id)}>Delete</button>
         </div >
     )
 }

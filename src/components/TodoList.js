@@ -35,7 +35,7 @@ export default function TodoList() {
 
 
     return (
-        <div>
+        <div className='searchAndList'>
             <input
                 className='search'
                 type="text"
